@@ -46,5 +46,6 @@ cp converted/*/*/mri/mwp1* mwp1
 
 ${cwd}/standalone/cat_standalone.sh -m $cwd/v93 -b ${cwd}/standalone/cat_standalone_smooth.m  mwp1/*mwp1* -a1 "[6 6 6]" -a2 " 's6' "  
 
-
+####合并脚本
+https://github.com/luozhy88/cat12/blob/main/run_bash.sh
 ## 统计分析
