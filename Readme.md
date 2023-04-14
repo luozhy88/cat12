@@ -31,7 +31,7 @@ cwd=/data/zhiyu/data/software/cat12_latest_R2017b_MCR_Linux/CAT12.8.2_R2017b_MCR
 
 cat12_dir=$cwd/spm12_mcr/home/gaser/gaser/spm/spm12/toolbox/cat12  
 
-## converted nifti
+## Converted nifti
 
 ${cwd}/standalone/cat_standalone.sh -s $cwd -m $cwd/v93    -b ${cwd}/standalone/cat_standalone_dicom2nii.m  /data/fansih/20210814_MRI_train/sampledata/ADgroup/T1/subject*/*dcm   -a1 " 'patid' " -a2 "{'converted'}" -e  
 
@@ -39,7 +39,7 @@ ${cwd}/standalone/cat_standalone.sh -s $cwd -m $cwd/v93    -b ${cwd}/standalone/
 
 ${cwd}/standalone/cat_standalone.sh  -s $cwd -m $cwd/v93 -b ${cwd}/standalone/cat_standalone_segment.m  converted/*/*/*nii  -a1 " '${cat12_dir}/templates_MNI152NLin2009cAsym/TPM_Age11.5.nii' "   -a2 " '${cat12_dir}/templates_MNI152NLin2009cAsym/Template_0_GS.nii' "  #Template_0_GS1mm  
 
-## smooth
+## Smooth
 mkdir mwp1  
 cp converted/*/*/mri/mwp1* mwp1  
 
