@@ -24,3 +24,23 @@ dcm2niix -f Sample1 -o test_output /data/*/RESEARCH_HEAD_20201031_120243_104000/
 
 参考：https://blog.csdn.net/Sophia2023/article/details/109076293?ydreferer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8%3D
 
+
+# 使用cat_standalone.sh进行流程化
+
+cwd=/data/zhiyu/data/software/cat12_latest_R2017b_MCR_Linux/CAT12.8.2_R2017b_MCR_Linux  
+
+cat12_dir=$cwd/spm12_mcr/home/gaser/gaser/spm/spm12/toolbox/cat12  
+
+## converted nifti
+
+${cwd}/standalone/cat_standalone.sh -s $cwd -m $cwd/v93    -b ${cwd}/standalone/cat_standalone_dicom2nii.m  /data/fansih/20210814_MRI_train/sampledata/ADgroup/T1/subject*/*dcm   -a1 " 'patid' " -a2 "{'converted'}" -e  
+
+## Segmentation
+
+${cwd}/standalone/cat_standalone.sh  -s $cwd -m $cwd/v93 -b ${cwd}/standalone/cat_standalone_segment.m  converted/*/*/*nii  -a1 " '${cat12_dir}/templates_MNI152NLin2009cAsym/TPM_Age11.5.nii' "   -a2 " '${cat12_dir}/templates_MNI152NLin2009cAsym/Template_0_GS.nii' "  #Template_0_GS1mm  
+
+## smooth
+mkdir mwp1  
+cp converted/*/*/mri/mwp1* mwp1  
+
+${cwd}/standalone/cat_standalone.sh -m $cwd/v93 -b ${cwd}/standalone/cat_standalone_smooth.m  mwp1/*mwp1* -a1 "[6 6 6]" -a2 " 's6' "  
