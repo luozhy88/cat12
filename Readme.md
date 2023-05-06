@@ -15,11 +15,11 @@ dcm2niix -f Sample1 -o test_output /data/*/RESEARCH_HEAD_20201031_120243_104000/
 
 ## 方法1 图形界面
 
-###此方法为图形界面，不推荐使用
-1  cd /data/zhiyu/data/software/cat12_latest_R2017b_MCR_Linux/CAT12.8.2_R2017b_MCR_Linux \
-2  bash -x run_spm12.sh /data/zhiyu/data/software/cat12_latest_R2017b_MCR_Linux/CAT12.8.2_R2017b_MCR_Linux/v93 ##v93是matlab所在的位置\   
-3  出现图形界面后，点击fMRI按钮
-4  点击下拉菜单Toolbox,选中cat12,在新出现的cat12显示框中选中Segment\
+### 此方法为图形界面，不推荐使用  
+1  cd /data/zhiyu/data/software/cat12_latest_R2017b_MCR_Linux/CAT12.8.2_R2017b_MCR_Linux \  
+2  bash -x run_spm12.sh /data/zhiyu/data/software/cat12_latest_R2017b_MCR_Linux/CAT12.8.2_R2017b_MCR_Linux/v93 ##v93是matlab所在的位置\     
+3  出现图形界面后，点击fMRI按钮  
+4  点击下拉菜单Toolbox,选中cat12,在新出现的cat12显示框中选中Segment\  
 
 
 
