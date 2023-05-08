@@ -50,4 +50,5 @@ ${cwd}/standalone/cat_standalone.sh -m $cwd/v93 -b ${cwd}/standalone/cat_standal
 https://github.com/luozhy88/cat12/blob/main/run_bash.sh
 ## 统计分析
 1 打开Statistics Analysis 中的Basic Models  
-2 在Batch Editor中选择SPM菜单栏中的Stats
+2 在Batch Editor中选择SPM菜单栏中的Stats  
+参考：https://blog.csdn.net/Sophia2023/article/details/109076293?ydreferer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8%3D  
